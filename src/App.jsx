@@ -1,6 +1,6 @@
-export function App(){
+import './styles/global.css';
 
-    throw new Error('teste')
+export function App(){
 
     return <h1>Hello ReactJS</h1>
 }
