@@ -1,8 +1,10 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { webpack } = require('webpack')
 
 module.exports ={
     mode: 'development',
+    devtool: 'eval-source-map',
     entry: path.resolve(__dirname,'src','index.jsx'),
     output: {
         path: path.resolve(__dirname,'dist'),
@@ -17,7 +19,7 @@ module.exports ={
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public','index.html')
-        })
+        }),
     ],
     module: {
         rules: [
